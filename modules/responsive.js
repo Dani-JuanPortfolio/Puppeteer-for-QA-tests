@@ -6,7 +6,7 @@ var functions = {
             const page = await browser.newPage()
             await page.setViewport({ width: 1280, height: 800 })
             await page.goto(url)
-            await page.screenshot({ path: 'PC size.png', fullPage: true })
+            await page.screenshot({ path: './results/responsive-pc size.png', fullPage: true })
             await browser.close()
             return 0;
         },
@@ -15,7 +15,7 @@ var functions = {
         const page = await browser.newPage()
         await page.setViewport({ width: 960, height: 600 })
         await page.goto(url)
-        await page.screenshot({ path: 'TABLET size.png', fullPage: true })
+        await page.screenshot({ path: './results/responsive-tablet size.png', fullPage: true })
         await browser.close()
         return 0;
     },
@@ -24,7 +24,7 @@ var functions = {
         const page = await browser.newPage()
         await page.setViewport({ width: 360, height: 740 })
         await page.goto(url)
-        await page.screenshot({ path: 'PHONE size.png', fullPage: true })
+        await page.screenshot({ path: './results/responsive-phone size.png', fullPage: true })
         await browser.close()
         return 0;
     }

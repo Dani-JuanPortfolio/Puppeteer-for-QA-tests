@@ -1,4 +1,5 @@
 const screenshoot = require('./modules/responsive.js');
+const xhr = require('./modules/xhr.js');
 const readline = require("readline");
 const input = readline.createInterface({
     input: process.stdin,
@@ -10,4 +11,5 @@ input.question('ingrese la URL: ', (answer) => {
     screenshoot.functions.screenshot_window(answer);
     screenshoot.functions.screenshot_tablet(answer);
     screenshoot.functions.screenshot_phone(answer);
+    xhr.functions.xhr(answer);
 });
